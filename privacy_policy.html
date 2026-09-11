@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>콘지킴 개인정보처리방침</title>
+<style>
+  body { font-family: -apple-system, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.7; color: #222; }
+  h1 { font-size: 1.6em; } h2 { font-size: 1.15em; margin-top: 2em; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95em; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+  th { background: #f3f7f3; } .note { background: #fff8e1; padding: 12px; border-radius: 8px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1>콘지킴 개인정보처리방침</h1>
+<p>시행일: [게시 확정 시 기입] · 버전: 앱 0.1.x 기준</p>
+
+<div class="note">※ 본 문서는 초안입니다. 게시 전 법률 전문가 검토가 필요합니다(docs/08 문서 "다음 단계" 참조). 아래 내용은 <strong>현재 출시 버전(0.1.x)이 실제로 하는 일</strong>만 기술했습니다. 서버 AI 폴백, 위치 기반 기능, 푸시(FCM), 구독 결제는 아직 앱에 없으며 도입 시 본 방침을 개정합니다.</div>
+
+<h2>1. 총칙</h2>
+<p>콘지킴(이하 "앱")은 기프티콘·모바일상품권의 유효기간 연장, 사용, 환불을 관리하도록 돕는 개인용 앱입니다. 앱은 <strong>회원가입 없이</strong> 동작하며, 개인정보 수집을 최소화하는 것을 원칙으로 합니다.</p>
+
+<h2>2. 처리하는 정보와 저장 위치</h2>
+<table>
+<tr><th>정보</th><th>수집 방법</th><th>저장 위치</th><th>서버 전송</th></tr>
+<tr><td>쿠폰 이미지, 바코드 값, 브랜드·상품명·금액·유효기간 등 인식 결과, 사용·연장·환불 기록</td><td>이용자가 사진첩에서 선택하거나 다른 앱의 "공유"로 전달</td><td><strong>이용자 기기 내부에만</strong> 저장</td><td>전송하지 않음</td></tr>
+<tr><td>알림 설정(알림 시점·시간), 온보딩 완료 여부</td><td>앱 내 설정</td><td>기기 내부</td><td>전송하지 않음</td></tr>
+<tr><td>발행사 정책 데이터</td><td>앱에 내장된 파일</td><td>앱 패키지</td><td>해당 없음(개인정보 아님)</td></tr>
+</table>
+<p>앱은 이름, 전화번호, 이메일, 계정 정보, 위치 정보, 광고 식별자를 수집하지 않습니다.</p>
+
+<h2>3. 이미지 인식(OCR)과 제3자 SDK</h2>
+<p>쿠폰 이미지의 글자·바코드 인식은 Google ML Kit(온디바이스)로 <strong>기기 안에서</strong> 처리되며, 이미지는 외부로 전송되지 않습니다. 다만 ML Kit SDK는 Google에 <strong>익명의 SDK 사용 통계·진단 정보</strong>(기기 종류, SDK 버전, 처리 성공 여부 등)를 전송할 수 있습니다. 이 정보에는 이미지 내용이나 이용자를 식별하는 정보가 포함되지 않습니다. 자세한 내용은 <a href="https://developers.google.com/ml-kit/terms">Google ML Kit 이용약관</a>을 참고하십시오.</p>
+
+<h2>4. 처리 목적</h2>
+<ol>
+<li>쿠폰 정보 등록·관리 및 바코드 표시</li>
+<li>만료·연장·환불 시점 알림(기기 내 로컬 알림)</li>
+<li>발행사별 연장·환불 절차 안내</li>
+</ol>
+
+<h2>5. 보유 및 파기</h2>
+<p>모든 데이터는 이용자 기기 안에만 있으며, 이용자가 개별 쿠폰을 삭제하거나 앱을 삭제하면 즉시 파기됩니다. 개발자는 이용자의 데이터에 접근할 수 없습니다.</p>
+
+<h2>6. 제3자 제공 및 처리 위탁</h2>
+<p>앱은 개인정보를 제3자에게 제공하거나 위탁하지 않습니다. (3항의 ML Kit SDK 익명 통계 제외)</p>
+
+<h2>7. 이용자의 권리</h2>
+<p>이용자는 앱 안에서 언제든 개별 쿠폰과 전체 데이터를 삭제할 수 있고, 알림을 켜고 끌 수 있습니다. 회원 계정이 없으므로 별도의 열람·정정 절차는 없습니다.</p>
+
+<h2>8. 앱 권한</h2>
+<table>
+<tr><th>권한</th><th>용도</th></tr>
+<tr><td>알림</td><td>만료·연장·환불 알림 표시</td></tr>
+<tr><td>사진 선택(시스템 포토 피커)</td><td>이용자가 고른 이미지만 앱에 전달됨. 사진첩 전체 접근 권한은 요청하지 않음</td></tr>
+<tr><td>카메라(선택)</td><td>쿠폰 촬영 등록 시에만, 시스템 카메라 앱을 통해</td></tr>
+</table>
+
+<h2>9. 아동의 개인정보</h2>
+<p>앱은 만 14세 미만 아동을 대상으로 하지 않습니다.</p>
+
+<h2>10. 개인정보 보호책임자</h2>
+<p>성명: 김재민 · 연락처: <a href="mailto:gimjm82+conjikim@gmail.com">gimjm82+conjikim@gmail.com</a></p>
+
+<h2>11. 방침의 변경</h2>
+<p>본 방침은 법령·서비스 변경에 따라 개정될 수 있으며, 변경 시 이 페이지의 시행일을 갱신하고 앱 내에 공지합니다.</p>
+</body>
+</html>
